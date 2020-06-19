@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<!-- head -->
+<head>
+   <meta charset="utf-8">
+   <title>RSS | Home</title>
+   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+   <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png')}}"> -->
+ </head>
+
+<body>
+    <div class="container">
+        <!-- controls -->
+    </div>
+    <div clss="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div>
+        {% for d in data[‘titles’] %}
+        <ul > <a href=“{{ data[‘links’][d] }}> {{ data[‘titles’][d] }} </a> </ul>
+        {% endfor %}
+    </div>
+</body>
+
+
+ </html>

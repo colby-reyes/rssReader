@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ data['article_title'] }}</title>
+  </head>
+  <body>
+    <div type="container flex-box"> {# << USE FLEX-BOX AS ARTICLE DISPLAY #}
+      {% extends "home.html" %}
+      {% block content %}
+      
+      <h1> {{ data[‘titles’][article_index] }} </h1>
+      <p> {{ data[‘links’][article_index] }} </p>
+      
+      {% endblock %}
+  </div>
+  </body>
+</html>
+
