@@ -14,10 +14,12 @@
         <!-- controls -->
     </div>
     <div clss="container">
+	<!-- feed list -->
         {% block content %}
         {% endblock %}
     </div>
     <div>
+	<!-- list articles in selected feed -->
         {% for d in data[‘titles’] %}
         <ul > <a href=“{{ data[‘links’][d] }}> {{ data[‘titles’][d] }} </a> </ul>
         {% endfor %}
